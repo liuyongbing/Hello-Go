@@ -22,6 +22,9 @@ func main() {
 
 	// 内建方法: copy()
 	hello_go.SliceOfCopy()
+
+	// 内建方法: delete()
+	hello_go.MapOfDelete()
 }
 
 func helloGo() {
