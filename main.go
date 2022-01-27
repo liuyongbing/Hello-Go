@@ -20,7 +20,8 @@ func main() {
 	// 内建方法: append()
 	hello_go.SliceOfAppend()
 
-
+	// 内建方法: copy()
+	hello_go.SliceOfCopy()
 }
 
 func helloGo() {
