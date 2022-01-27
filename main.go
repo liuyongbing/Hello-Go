@@ -16,6 +16,11 @@ func main() {
 	// 内建方法: new()
 	hello_go.NewMap()
 	hello_go.MakeMap2()
+
+	// 内建方法: append()
+	hello_go.SliceOfAppend()
+
+
 }
 
 func helloGo() {
