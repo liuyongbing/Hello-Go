@@ -1,24 +1,24 @@
 package main
 
 import (
-	"Hello-Go/hello_make"
+	"Hello-Go/hello_go"
 	"fmt"
 )
 
-func main()  {
+func main() {
 	helloGo()
 
 	// 内建方法: make()
-	hello_make.MakeSlice()
-	hello_make.MakeMap()
-	hello_make.MakeChan()
+	hello_go.MakeSlice()
+	hello_go.MakeMap()
+	hello_go.MakeChan()
 
 	// 内建方法: new()
-	hello_make.NewMap()
-	hello_make.MakeMap2()
+	hello_go.NewMap()
+	hello_go.MakeMap2()
 }
 
-func helloGo()  {
+func helloGo() {
 	fmt.Println("Hello, Go!(2022-01-27)")
 	fmt.Println("")
 }
