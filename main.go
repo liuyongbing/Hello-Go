@@ -26,10 +26,15 @@ func main() {
 	// 内建方法: delete()
 	hello_go.MapOfDelete()
 
-	// 内建方法: panic() and recover()
+	// 内建方法: panic() & recover()
 	hello_go.PanicRecover()
 	hello_go.PanicRecover2()
 	hello_go.PanicRecover3()
+
+	// 内建方法: len() & cap()
+	hello_go.LenAndCap()
+
+	// 内建方法: close()
 }
 
 func helloGo() {

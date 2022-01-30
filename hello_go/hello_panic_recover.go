@@ -33,11 +33,12 @@ func coverPanic()  {
 	message := recover()
 
 	switch message.(type) {
-	case string:
-		fmt.Println("message type(string):", message)
-	case error:
-		fmt.Println("message type(error):", message)
-	default:
-		fmt.Println("message type(unknown):", message)
+		case string:
+			fmt.Println("message type(string):", message)
+		case error:
+			fmt.Println("message type(error):", message)
+		default:
+			fmt.Println("message type(unknown):", message)
 	}
+	fmt.Println("")
 }
