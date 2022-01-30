@@ -6,8 +6,38 @@ import (
 )
 
 func main() {
+	// Hello Go
 	helloGo()
 
+	// 内建方法
+	helloMake()
+
+	// struct
+	hello_go.StructDog()
+	hello_go.StructDog2()
+	hello_go.StructDog3()
+
+	// struct function
+	dog := new(hello_go.Dog)
+	dog.ID = 1000
+	dog.Run()
+
+	// struct oop
+	cat := new(hello_go.Cat)
+	cat.ID = 2000
+	cat.Color = "White"
+	cat.Run()
+	cat.Say()
+}
+
+// Hello Go
+func helloGo() {
+	fmt.Println("Hello, Go!(2022-01-27)")
+	fmt.Println("")
+}
+
+// 内建方法
+func helloMake()  {
 	// 内建方法: make()
 	hello_go.MakeSlice()
 	hello_go.MakeMap()
@@ -35,9 +65,5 @@ func main() {
 	hello_go.LenAndCap()
 
 	// 内建方法: close()
-}
-
-func helloGo() {
-	fmt.Println("Hello, Go!(2022-01-27)")
-	fmt.Println("")
+	hello_go.ChanClose()
 }
