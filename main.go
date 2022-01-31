@@ -13,6 +13,35 @@ func main() {
 	helloMake()
 
 	// struct
+	helloStruct()
+
+	// interface
+	helloInterface()
+}
+
+// Interface
+func helloInterface()  {
+	fmt.Println("Demo of interface:")
+
+	cat := new(hello_go.Cat)
+	bird := new(hello_go.Bird)
+	action(cat)
+	action(bird)
+
+	fmt.Println("")
+}
+
+// Interface
+func action(b hello_go.Behavior) string {
+	b.Run()
+	b.Say()
+
+	return ""
+}
+
+// Struct
+func helloStruct()  {
+	// struct
 	hello_go.StructDog()
 	hello_go.StructDog2()
 	hello_go.StructDog3()
@@ -28,12 +57,6 @@ func main() {
 	cat.Color = "White"
 	cat.Run()
 	cat.Say()
-}
-
-// Hello Go
-func helloGo() {
-	fmt.Println("Hello, Go!(2022-01-27)")
-	fmt.Println("")
 }
 
 // 内建方法
@@ -66,4 +89,10 @@ func helloMake()  {
 
 	// 内建方法: close()
 	hello_go.ChanClose()
+}
+
+// Hello Go
+func helloGo() {
+	fmt.Println("Hello, Go!(2022-01-27)")
+	fmt.Println("")
 }
