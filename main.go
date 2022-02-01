@@ -3,6 +3,8 @@ package main
 import (
 	"Hello-Go/hello_go"
 	"fmt"
+	"runtime"
+	"time"
 )
 
 func main() {
@@ -17,6 +19,62 @@ func main() {
 
 	// interface
 	helloInterface()
+
+	// 并发
+	helloGorotine()
+
+	// 协程间的通信
+	helloChan()
+
+	// 协程间的同步
+	helloWG()
+
+	// 指针
+	helloPoint()
+}
+
+// 指针
+func helloPoint() {
+	// 指针
+	hello_go.GoPoint()
+
+	// 数组指针
+	hello_go.PointArr()
+
+	// 指针数组
+	hello_go.ArrPoint()
+}
+
+// 协程间的同步
+func helloWG() {
+	hello_go.Read()
+	go hello_go.Write()
+	hello_go.WG.Wait()
+	fmt.Println("All done!")
+	fmt.Println("")
+}
+
+// 协程间的通信
+func helloChan()  {
+	go hello_go.Send()
+	go hello_go.Receive()
+
+	time.Sleep(time.Second * 1)
+}
+
+// 并发
+func helloGorotine()  {
+	fmt.Println("并发:")
+	fmt.Println("CPU num:", runtime.NumCPU())
+
+	runtime.GOMAXPROCS(runtime.NumCPU() - 1)
+
+	go hello_go.Loop()
+	go hello_go.Loop()
+
+	time.Sleep(time.Second * 1)
+
+	fmt.Println("")
 }
 
 // Interface
