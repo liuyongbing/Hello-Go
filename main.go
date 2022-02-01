@@ -31,6 +31,20 @@ func main() {
 
 	// 指针
 	helloPoint()
+
+	// json
+	helleJson()
+}
+
+// json
+func helleJson() {
+	// json 序列化
+	hello_go.SerializeStruct()
+	hello_go.SerializeMap()
+
+	// json 反序列化
+	hello_go.UnSerializeStruct()
+	hello_go.UnSerializeMap()
 }
 
 // 指针
@@ -55,15 +69,15 @@ func helloWG() {
 }
 
 // 协程间的通信
-func helloChan()  {
+func helloChan() {
 	go hello_go.Send()
 	go hello_go.Receive()
 
-	time.Sleep(time.Second * 1)
+	time.Sleep(time.Second * 2)
 }
 
 // 并发
-func helloGorotine()  {
+func helloGorotine() {
 	fmt.Println("并发:")
 	fmt.Println("CPU num:", runtime.NumCPU())
 
@@ -78,7 +92,7 @@ func helloGorotine()  {
 }
 
 // Interface
-func helloInterface()  {
+func helloInterface() {
 	fmt.Println("Demo of interface:")
 
 	cat := new(hello_go.Cat)
@@ -98,7 +112,7 @@ func action(b hello_go.Behavior) string {
 }
 
 // Struct
-func helloStruct()  {
+func helloStruct() {
 	// struct
 	hello_go.StructDog()
 	hello_go.StructDog2()
@@ -118,7 +132,7 @@ func helloStruct()  {
 }
 
 // 内建方法
-func helloMake()  {
+func helloMake() {
 	// 内建方法: make()
 	hello_go.MakeSlice()
 	hello_go.MakeMap()
