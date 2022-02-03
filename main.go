@@ -1,10 +1,11 @@
 package main
 
 import (
-	"Hello-Go/hello_go"
 	"fmt"
 	"runtime"
 	"time"
+
+	"github.com/liuyongbing/Hello-Go/hello_go"
 )
 
 func main() {
